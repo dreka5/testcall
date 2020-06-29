@@ -17,21 +17,7 @@ namespace testcallLib
             throw new NotImplementedException();
         }
 
-        public Task FavoriteAdd(ConsultantIdData data)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task FavoriteDelete(ConsultantIdData data)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<ConsultantPublicDataOut>> FavoriteGet()
-        {
-            throw new NotImplementedException();
-        }
-
+     
         public Task FavoriteRemoveAll()
         {
             throw new NotImplementedException();
@@ -42,6 +28,9 @@ namespace testcallLib
             throw new NotImplementedException();
         }
 
-        
+        public Task<ClientBalance> ClientBalance()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

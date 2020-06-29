@@ -67,7 +67,7 @@ namespace Webtestcall
                        options.TokenValidationParameters = new TokenValidationParameters
                        {
                            ValidateIssuer = true,
-                           ValidIssuer = TestLib.TokenResolve.AuthOptions.ISSUER,
+                           ValidIssuer =testcallLib.TokenResolve.AuthOptions.ISSUER,
                            ValidateAudience = true,
                            ValidAudience = testcallLib.TokenResolve.AuthOptions.AUDIENCE,
                            ValidateLifetime = true,

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿//using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -42,12 +42,12 @@ namespace testcallLib
             var content = result.Content.ReadAsStringAsync();
             content.Wait();
 
-            var status = JsonConvert.DeserializeObject<SendMessageStatus>(content.Result);
+            //var status = JsonConvert.DeserializeObject<SendMessageStatus>(content.Result);
 
-            if (status.result != 1)
-            {
-                throw new Exception("Ошибка отправки смс.");
-            }
+            //if (status.result != 1)
+            //{
+            //    throw new Exception("Ошибка отправки смс.");
+            //}
         }
         public static HttpResponseMessage MakeVoxImplantPostRequest(string method, Dictionary<string, string> parametres)
         {
@@ -97,11 +97,11 @@ namespace testcallLib
     }
     public class VoxData
     {
-        internal string accountId = "2991000";
-        internal string apiKey = "6710ff6a-47d4-4683-9d9f-b996ab7ff156";
-        internal string Scenario_CallWithCode = "2690303";
-        internal string applicationId = "6800839";
-        internal string smsPhone = "79581002735";   //"79581006851";
+        internal string accountId = "2991333000";
+        internal string apiKey = "6710sadfsdfff6a-4323327d4-46sdafsd83-9d9f-b996ab7ff156";
+        internal string Scenario_CallWithCode = "26905435303";
+        internal string applicationId = "436534";
+        internal string smsPhone = "79581043202735";   //"79581006851";
     }
     class SendMessageStatus
     {

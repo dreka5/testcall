@@ -6,6 +6,27 @@ using System.Text;
 
 namespace testcallLib
 {
+    public class kukurma
+    {
+        public string first { get; set; }
+    }
+
+    public class ApplicationContext : DbContext
+    {
+        public DbSet<kukurma> kukurma { get; set; }
+
+        public ApplicationContext()
+        {
+            Database.EnsureCreated();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            ///host=95.163.180.83 dbname=<DATABASE> user=<USERNAME> password=<PASSWORD>"
+            optionsBuilder.UseNpgsql("Host=95.163.180.83;Port=5432;Database=JetPostgreSQL;Username=dreka21;Password=roma1613");
+        }
+    }
+
     public abstract class CommonBase
     {
 
@@ -20,6 +41,8 @@ namespace testcallLib
         public ClaimsPrincipal User;
 
         public DBtestcall_Context GetDB => new PrimaryContext().CreateDbContext();
+
+
 
      
     }
